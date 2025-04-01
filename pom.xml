@@ -9,9 +9,9 @@
     </parent>
 
     <packaging>jar</packaging>
-    <groupId>org.webjars</groupId>
+    <groupId>anthonydahanne.org.webjars</groupId>
     <artifactId>fullcalendar</artifactId>
-    <version>6.1.10-SNAPSHOT</version>
+    <version>6.1.10</version>
     <name>FullCalendar</name>
     <description>WebJar for FullCalendar</description>
     <url>http://webjars.org</url>
@@ -129,18 +129,15 @@
                 <version>3.0.1</version>
             </plugin>
 
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.13</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>sonatype-nexus-staging</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/anthonydahanne/fullcalendar</url>
+        </repository>
+    </distributionManagement>
 
 </project>
